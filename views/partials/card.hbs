@@ -1,0 +1,81 @@
+<section class="ui segment" action="/stations/${_station.id}/addlatestreadings" method="POST">
+    <div class="ui five inverted stackable cards">
+       <div class="card">
+            <div class="extra">
+                <h3 class="header">
+                    {{name}}{{station.name}}<i class=" right floated map marker icon large purple"></i>
+                  
+                </h3>
+                <h4> 
+                    Lat: {{station.latitude}}
+                    <br>
+                    Lng:{{station.longitude}}
+                </h4>
+            </div>
+        </div>
+        <div class="card">
+            <div class="extra">
+                <h3 class="header">
+                    Weather 
+                </h3>
+                <h4 class="header"> {{stationSummary.weatherCode}}
+                  <i class="{{stationSummary.weatherCodeIcons}} large red"></i>
+                </h4>
+            </div>
+        </div>
+        <div class="card">
+            <div class="extra">
+                <h3 class="header">
+                    Temp <i class="right floated temperature high icon large blue"></i>
+                </h3>
+                <h4 class="header">
+                      {{stationSummary.lastestReading.temp}} C
+                      <br>
+                     {{stationSummary.tempF}} F
+                    <br>
+                     Max: {{stationSummary.maxReading.temp}}
+                      <br>
+                      Min: {{stationSummary.minReading.temp}}
+                    <br>
+                    <i class= "{{stationSummary.tempTrendIcons}} large pink"></i>
+                  </br>
+              {{stationSummary.tempTrend}}
+                </h4>
+            </div>
+        </div>
+        <div class="card">
+            <div class="extra">
+                <h3 class="header">
+                    Wind <i class="right floated wind icon green extra large"></i>
+                </h3>
+                <h4 class="header">
+                    {{stationSummary.beafourt}} bft
+                    <br>
+                   {{stationSummary.winddirectionCompass}} 
+                    <br>
+                    Feels like: {{stationSummary.windChill}} 
+                    <br>
+                    Max: {{stationSummary.maxReading.windspeed}}
+                    <br>
+                    Min: {{stationSummary.minReading.windspeed}}
+                </h4>
+            </div>
+        </div>
+        <div class="card">
+            <div class="extra">
+                <h3 class="header">
+                    Pressure <i class="right floated arrows alternate icon orange extra large"></i>
+                </h3>
+                <h4 class="header">
+                    {{stationSummary.lastestReading.pressure}} hpa
+                    <br>
+                    Max: {{stationSummary.maxReading.pressure}}
+                    <br>
+                    Min: {{stationSummary.minReading.pressure}}
+                  <br>
+                  {{stationSummary.tempTrend}}
+                </h4>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,94 @@
+{
+  "stationCollection": [
+    {
+      "id": "01",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Tramore",
+      "latitude": "52.16",
+      "longitude": "-7.152",
+      "readings": [
+        {
+          "id": "03",
+          "date": "2021-01-19 08:31:00",
+          "code": "800",
+          "temp": "0.5",
+          "windspeed": "3.5",
+          "winddirection": "90",
+          "pressure": "1002"
+        },
+        {
+          "id": "03",
+          "date": "2021-01-20 09:34:00",
+          "code": "600",
+          "temp": "6.0",
+          "windspeed": "2",
+          "winddirection": "96",
+          "pressure": "1004"
+        },
+        {
+          "id": "04",
+          "date": "2021-01-20 09:34:00",
+          "code": "700",
+          "temp": "8",
+          "windspeed": "1",
+          "winddirection": "101",
+          "pressure": "1005"
+        },
+        {
+          "id": "23677cb0-fdfd-11eb-badf-4d93d1cf9048",
+          "date": "2021-8-15 20:15:22",
+          "code": "500",
+          "temp": "15",
+          "windspeed": "12",
+          "winddirection": "10",
+          "pressure": "100"
+        },
+        {
+          "id": "065b0bd0-fdff-11eb-b4a9-6b8581a36423",
+          "date": "2021-8-15 20:28:53",
+          "code": "600",
+          "temp": "8",
+          "windspeed": "10",
+          "winddirection": "22",
+          "pressure": "100"
+        },
+        {
+          "id": "121165f0-fdff-11eb-b4a9-6b8581a36423",
+          "date": "2021-8-15 20:29:12",
+          "code": "700",
+          "temp": "2",
+          "windspeed": "10",
+          "winddirection": "22",
+          "pressure": "1000"
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "name": "Dunmore",
+      "latitude": "52.149",
+      "longitude": "-6.994",
+      "readings": [
+        {
+          "id": "06",
+          "date": "2021-01-20 10:31:00",
+          "code": "700",
+          "temp": "8",
+          "windspeed": "1",
+          "winddirection": "98",
+          "pressure": "999"
+        },
+        {
+          "id": "07",
+          "date": "2021-01-19 09:31:00",
+          "code": "200",
+          "temp": "0.5",
+          "windspeed": "3.5",
+          "winddirection": "102",
+          "pressure": "1000"
+        }
+      ]
+    }
+  ]
+}
