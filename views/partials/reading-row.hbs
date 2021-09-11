@@ -1,28 +1,33 @@
 <tbody>
-    {{#each station.readings}}
-      <tr>
-        <td>
-          {{date}}
-        </td>
-        <td>
-          {{code}}
-        </td>
-        <td>
-          {{temp}}
-        </td>
-        <td>
-          {{windspeed}}
-        </td>
-        <td>
-          {{winddirection}}
-        </td>
-        <td>
-          {{pressure}}
-        </td>
-        <td>
-          <a href="/station/{{../station.id}}/deletereading/{{id}}" class="ui red icon button">
+{{#each station.readings}}
+<tr>
+    <td>
+        {{date}}
+    </td>
+    <td>
+        {{code}}
+    </td>
+    <td>
+        {{temp}}
+    </td>
+    <td>
+        {{windspeed}}
+    </td>
+    <td>
+        {{winddirection}}
+    </td>
+    <td>
+        {{pressure}}
+    </td>
+    <td>
+        <a href="/reading/{{../station.id}}/editreading/{{id}}" class="ui icon button">
+            <i class="pencil alternate icon"></i>
+        </a>
+    </td>
+    <td>
+        <a href="/station/{{../station.id}}/deletereading/{{id}}" class="ui red icon button">
             <i class="icon trash"></i>
-        </td>
-      </tr>
-   {{/each}}
-  </tbody>
+    </td>
+</tr>
+{{/each}}
+</tbody>

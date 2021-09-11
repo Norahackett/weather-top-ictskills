@@ -104,13 +104,11 @@ const stationConversions = {
       case 500:
         return "cloud showers heavy icon";
       case 600:
-        return "cloud rain icon";
+        return "cloud sun rain icon";
       case 700:
         return "snowflake icon";
       case 800:
         return "bolt icon";
-      default:
-        return "error";
     }
   },
 
@@ -127,14 +125,12 @@ const stationConversions = {
     ).toFixed(2);
   },
 
-  trendCodeIcons(tempTrend) {
-    switch (tempTrend) {
-      case 0.5:
+  trendCodeIcons(station) {
+    switch (station) {
+      case 1:
         return "arrow up icon";
       case -1:
         return "arrow down icon";
-      default:
-        return "error";
     }
   }
 };

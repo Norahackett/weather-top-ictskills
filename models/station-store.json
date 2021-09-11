@@ -8,7 +8,7 @@
       "longitude": "-7.152",
       "readings": [
         {
-          "id": "03",
+          "id": "02",
           "date": "2021-01-19 08:31:00",
           "code": "800",
           "temp": "0.5",
@@ -27,44 +27,17 @@
         },
         {
           "id": "04",
-          "date": "2021-01-20 09:34:00",
+          "date": "2021-09-08 11:8:9",
           "code": "700",
           "temp": "8",
           "windspeed": "1",
           "winddirection": "101",
           "pressure": "1005"
-        },
-        {
-          "id": "23677cb0-fdfd-11eb-badf-4d93d1cf9048",
-          "date": "2021-8-15 20:15:22",
-          "code": "500",
-          "temp": "15",
-          "windspeed": "12",
-          "winddirection": "10",
-          "pressure": "100"
-        },
-        {
-          "id": "065b0bd0-fdff-11eb-b4a9-6b8581a36423",
-          "date": "2021-8-15 20:28:53",
-          "code": "600",
-          "temp": "8",
-          "windspeed": "10",
-          "winddirection": "22",
-          "pressure": "100"
-        },
-        {
-          "id": "121165f0-fdff-11eb-b4a9-6b8581a36423",
-          "date": "2021-8-15 20:29:12",
-          "code": "700",
-          "temp": "2",
-          "windspeed": "10",
-          "winddirection": "22",
-          "pressure": "1000"
         }
       ]
     },
     {
-      "id": "05",
+      "id": "08",
       "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
       "name": "Dunmore",
       "latitude": "52.149",
@@ -87,6 +60,15 @@
           "windspeed": "3.5",
           "winddirection": "102",
           "pressure": "1000"
+        },
+        {
+          "id": "6b9c3930-10b8-11ec-b988-cf5a20a163c5",
+          "date": "2021-9-8 16:21:20",
+          "code": "800",
+          "temp": "0.01",
+          "windspeed": "5",
+          "winddirection": "100",
+          "pressure": "1002"
         }
       ]
     }

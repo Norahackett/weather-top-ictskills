@@ -1,25 +1,24 @@
 <section class="ui segment" action="/stations/${_station.id}/addlatestreadings" method="POST">
     <div class="ui five inverted stackable cards">
-       <div class="card">
+        <div class="card">
             <div class="extra">
                 <h3 class="header">
-                    <i class=" right floated map marker icon large purple"></i>
-                    {{station.name}}
+                    {{name}}{{station.name}}<i class="right floated map marker icon large purple"></i>
                 </h3>
-                <h4> 
-                    Lat: {{station.latitude}}
+                <h4>
+                    Lat: {{station.latitude}}{{latitude}}
                     <br>
-                    Lng:{{station.longitude}}
+                    Lng: {{station.longitude}}{{longitude}}
                 </h4>
             </div>
         </div>
         <div class="card">
             <div class="extra">
                 <h3 class="header">
-                    Weather <i class="${_station.latestWeather} large white"></i>
+                    Weather
+                    <i class="right floated large {{weatherCodeIcons}} large red"></i>
                 </h3>
-                <h4 class="header"> {{stationSummary.weatherCode}}
-                  <i class="{{stationSummary.weatherCodeIcons}} large white"></i>
+                <h4 class="header"> {{weatherCode}}
                 </h4>
             </div>
         </div>
@@ -29,13 +28,17 @@
                     Temp <i class="right floated temperature high icon large blue"></i>
                 </h3>
                 <h4 class="header">
-                      {{stationSummary.lastestReading.temp}} C
-                      <br>
-                     {{stationSummary.tempF}} F
+                    {{lastReading.temp}} C
                     <br>
-                     Max: {{stationSummary.maxReading.temp}}
-                      <br>
-                      Min: {{stationSummary.minReading.temp}}
+                    {{tempF}} F
+                    <br>
+                    Max: {{maxReading.temp}}
+                    <br>
+                    Min: {{minReading.temp}}
+                    <br>
+                    <i class="{{tempTrendIcons}}"></i>
+                    </br>
+                    <i class="right floated large {{tempTrend}} blue "></i>
                 </h4>
             </div>
         </div>
@@ -45,30 +48,33 @@
                     Wind <i class="right floated wind icon green extra large"></i>
                 </h3>
                 <h4 class="header">
-                    {{stationSummary.beafourt}} bft
+                    {{beafourt}} bft
                     <br>
-                   {{stationSummary.winddirectionCompass}} 
+                    {{winddirectionCompass}}
                     <br>
-                    Feels like: {{stationSummary.windChill}} 
+                    Feels like: {{windChill}}
                     <br>
-                    Max: {{stationSummary.maxReading.windspeed}}
+                    Max: {{maxReading.windspeed}}
                     <br>
-                    Min: {{stationSummary.minReading.windspeed}}
-          
+                    Min: {{minReading.windspeed}}
+                    <br>
+                    <i class="right floated large {{windTrend}} green"></i>
                 </h4>
             </div>
         </div>
         <div class="card">
             <div class="extra">
                 <h3 class="header">
-                    Pressure <i class="right floated arrows alternate icon orange extra large"></i>
+                    Pressure <i class="right floated centos icon orange extra large"></i>
                 </h3>
                 <h4 class="header">
-                      {{stationSummary.lastestReading.pressure}} hpa
+                    {{lastReading.pressure}} hpa
                     <br>
-                    Max: {{stationSummary.maxReading.pressure}}
+                    Max: {{maxReading.pressure}}
                     <br>
-                    Min: {{stationSummary.minReading.pressure}}
+                    Min: {{minReading.pressure}}
+                    <br>
+                    <i class="right floated large {{pressureTrend}} orange"></i>
                 </h4>
             </div>
         </div>

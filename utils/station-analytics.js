@@ -23,79 +23,51 @@ const stationAnalytics = {
     return minReading;
   },
 
-  getReadings(station) {
-    let readings = null;
-    if (station.readings.length > 0) {
-      readings = station.readings[station.readings.length - 1];
-    }
-    return readings;
-  },
-
-  getReadingscode(station) {
-    let readings = null;
-    if (station.readings.length > 0) {
-      readings = station.readings[station.readings.length - 1].code;
-    }
-    return readings;
-  },
-
-  getReadingstemp(station) {
-    let readings = null;
-    if (station.readings.length > 0) {
-      readings = station.readings[station.readings.length - 1].temp;
-    }
-    return readings;
-  },
-  getReadingsWinddirection(station) {
-    let readings = null;
-    if (station.readings.length > 0) {
-      readings = station.readings[station.readings.length - 1].winddirection;
-    }
-    return readings;
-  },
-
-  getReadingsWindspeed(station) {
-    let readings = null;
-    if (station.readings.length > 0) {
-      readings = station.readings[station.readings.length - 1].windspeed;
-    }
-    return readings;
-  },
-
-  getWindReadings(station) {
-    let readings = null;
-    if (station.readings.length > 0) {
-      readings = station.readings[station.readings.length - 1].windspeed;
-    }
-    return readings;
-  },
-
-  
-  timeTrend (station){
-  let readings = 0;
+  pressureTrend(station) {
+    let readings = 0;
+    let a = Number(station.readings[station.readings.length - 3].pressure);
+    let b = Number(station.readings[station.readings.length - 2].pressure);
+    let c = Number(station.readings[station.readings.length - 1].pressure);
     if (station.readings.length > 2) {
-      if  ((station.readings[-1].temp > station.readings[-2].temp ) && (station.readings[-2].temp > station.readings[-1].temp)){ 
-        readings = 1;
-      } else if (( station.readings[-3].temp < station.readings[-2].temp) && (station.readings[-2].temp< station.readings[-1].temp)) {
+      if (a > b && b > c) {
         readings = -1;
+      } else if (a < b && b < c) {
+        readings = 1;
       }
     }
     return readings;
   },
-  
-  
-  pressureTrend (station){
-  let readings = 0;
+
+  tempTrend(station) {
+    let readings = 0;
+
+    let a = Number(station.readings[station.readings.length - 3].temp);
+    let b = Number(station.readings[station.readings.length - 2].temp);
+    let c = Number(station.readings[station.readings.length - 1].temp);
     if (station.readings.length > 2) {
-      if  ((station.readings[2].pressure > station.readings[1].pressure ) && (station.readings[1].pressure > station.readings[0].pressure)){ 
-        readings = 1;
-      } else if (( station.readings[2].pressure < station.readings[1].pressure) && (station.readings[1].pressure< station.readings[0].pressure)) {
+      if (a > b && b > c) {
         readings = -1;
+      } else if (a < b && b < c) {
+        readings = 1;
+      }
+    }
+    return readings;
+  },
+
+  windTrend(station) {
+    let readings = 0;
+    let a = Number(station.readings[station.readings.length - 3].windspeed);
+    let b = Number(station.readings[station.readings.length - 2].windspeed);
+    let c = Number(station.readings[station.readings.length - 1].windspeed);
+    if (station.readings.length > 2) {
+      if (a > b && b > c) {
+        readings = -1;
+      } else if (a < b && b < c) {
+        readings = 1;
       }
     }
     return readings;
   }
 };
-
 
 module.exports = stationAnalytics;

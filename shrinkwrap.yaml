@@ -1,4 +1,5 @@
 dependencies:
+  axios: 0.21.1
   body-parser: 1.19.0
   cookie-parser: 1.4.5
   express: 4.17.1
@@ -37,6 +38,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-TR2mEZFVOj2pLStYxLht7TyfuRzaydfpxr3k9RpHIzMgw7A64dzsdqCxH1WJyQdoe8T10nDXd9wnEigmiuHIZw==
+  /axios/0.21.1:
+    dependencies:
+      follow-redirects: 1.14.2
+    dev: false
+    resolution:
+      integrity: sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
   /balanced-match/1.0.2:
     dev: false
     resolution:
@@ -290,6 +297,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-GRnmB5gPyJpAhTQdSZTSp9uaPSvl09KoYcMQtsB9rQoOmzs9dH6ffeccH+Z+cv6P68Hu5bC6JjRh4Ah/mHSNRw==
+  /follow-redirects/1.14.2:
+    dev: false
+    engines:
+      node: '>=4.0'
+    resolution:
+      integrity: sha512-yLR6WaE2lbF0x4K2qE2p9PEXKLDjUjnR/xmjS3wHAYxtlsI9MLLBJUZirAHKzUZDGLxje7w/cXR49WOUo4rbsA==
   /forwarded/0.2.0:
     dev: false
     engines:
@@ -824,6 +837,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  axios: ^0.21.1
   body-parser: ^1.19.0
   cookie-parser: ^1.4.5
   express: ^4.17.1

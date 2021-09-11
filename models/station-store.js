@@ -52,6 +52,7 @@ const stationStore = {
 
   getReading(id, readingId) {
     const station = this.store.findOneBy(this.collection, { id: id });
+
     const readings = station.readings.filter(
       reading => reading.id == readingId
     );
@@ -60,9 +61,14 @@ const stationStore = {
 
   updateReading(reading, updatedReading) {
     reading.code = updatedReading.code;
+    reading.temp = updatedReading.temp;
+    reading.windspeed = updatedReading.windspeed;
+    reading.winddirection = updatedReading.winddirection;
+    reading.pressure = updatedReading.pressure;
 
     this.store.save();
-  }
+  },
+
 };
 
 module.exports = stationStore;
